@@ -6,8 +6,11 @@ import { NavLink } from "react-router-dom";
 function App() {
   return (
     <div>
-      <h1>Hello from App</h1>
-      <NavLink to='/gallery'>
+      <NavLink exact to='/'>
+        Home
+      </NavLink>
+
+      <NavLink exact to='/gallery'>
       <GalleryNavigation galleries={harvardArt.records} />
       </NavLink>
     </div>
