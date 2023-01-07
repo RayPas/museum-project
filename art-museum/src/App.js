@@ -12,12 +12,20 @@ function App() {
 
       <NavLink to="/gallery">Gallery</NavLink>
 
-      <Route exact path="/"></Route>
+      <Route exact path="/">
+        <h2>Harvard Art Museum</h2>
+        <p>
+          Look, but Don't Touch. Please select a gallery in the navigation bar
+        </p>
+      </Route>
       <Route path="/gallery">
         <GalleryNavigation galleries={harvardArt.records} />
       </Route>
       <Route path="/gallery/:galleryId">
         <GalleryView galleries={harvardArt.records} />
+      </Route>
+      <Route path="page-not-found">
+        <h1>Page not found</h1>
       </Route>
     </div>
   );
